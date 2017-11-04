@@ -1,0 +1,41 @@
+<!--<div> This is an User Details</div> <button class="btn btn-primary" (click)="data()">View Todo</button>
+
+<div *ngIf='showTodo'>-->
+<div class="main-container">
+       <header class="header header-6">
+      header
+    </header>
+    <div class="content-container">
+        <div class="content-area">
+                <div *ngFor="let todo of result;let i = index">
+                    <ul class="list">
+                        <div class="form-group">
+                                <input type="checkbox" id="{{i}}" (click)="Click(todo.id,todo.completed)">
+                            <div *ngIf="todo.completed; else elseBlock"><del>{{todo.title}}</del></div>
+                            <ng-template #elseBlock><label>{{todo.title}}</label></ng-template>
+                        
+                        </div>
+                
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--<clr-datagrid>
+    <clr-dg-column>Task</clr-dg-column>
+    <clr-dg-column>Status</clr-dg-column>
+
+
+    <clr-dg-row *ngFor="let todo of result;let i = index">
+        <clr-dg-cell>
+             <div *ngIf="todo.completed; else elseBlock"><del>{{todo.title}}</del></div>
+             <ng-template #elseBlock><label>{{todo.title}}</label></ng-template>
+        </clr-dg-cell>
+        <clr-dg-cell><input type="checkbox" id="{{i}}" (click)="Click(todo.id,todo.completed)"></clr-dg-cell>
+        
+    </clr-dg-row>
+
+   
+</clr-datagrid>-->
+<!--</div> -->

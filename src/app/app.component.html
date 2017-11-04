@@ -1,20 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div>
+
+<div class="main-container">
+       <header class="header header-6">
+      header
+    </header>
+    <div class="content-container">
+        <div class="content-area">
+      <clr-datagrid>
+    <clr-dg-column>User ID</clr-dg-column>
+    <clr-dg-column>Name</clr-dg-column>
+    <clr-dg-column>User Name</clr-dg-column>
+    <clr-dg-column>Email</clr-dg-column>
+    <clr-dg-column>Phone</clr-dg-column>
+    <clr-dg-column>Address</clr-dg-column>
+    <clr-dg-column>Company</clr-dg-column>
+    <clr-dg-column>Website</clr-dg-column>
+     <clr-dg-column>View Todo</clr-dg-column>
+
+    <clr-dg-row *ngFor="let user of result">
+        <clr-dg-cell>{{user.id}}</clr-dg-cell>
+        <clr-dg-cell>{{user.name}}</clr-dg-cell>
+        <clr-dg-cell>{{user.username}}</clr-dg-cell>
+        <clr-dg-cell>{{user.email}}</clr-dg-cell>
+        <clr-dg-cell>{{user.phone}}</clr-dg-cell>
+        <clr-dg-cell>{{user.address.city }}</clr-dg-cell>
+        <clr-dg-cell>{{user.company.name}}</clr-dg-cell>
+        <clr-dg-cell>{{user.website}}</clr-dg-cell>
+        <clr-dg-cell>
+             <button class="btn btn-primary" (click)="Click(user.id)">View Todo</button>
+         </clr-dg-cell>
+    </clr-dg-row>
+
+</clr-datagrid>
+        </div>
+       
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
